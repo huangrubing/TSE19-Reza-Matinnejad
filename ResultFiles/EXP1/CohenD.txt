@@ -1,0 +1,96 @@
+————————————————————————
+q=3:
+
+Oracle-Cov-random: Sig-Small
+Oracle-vb-random: Sig-High
+Oracle-fb-random: Sig-High
+Oracle-vb-cov: Sig-High
+Oracle-fb-cov: Sig-High
+Oracle-vb-fb: NoSig
+
+Th0.15-Cov-random: Sig-Medium 
+Th0.15-vb-random: Sig-High
+Th0.15-fb-random: Sig-High
+Th0.15-vb-cov: Sig-High
+Th0.15-fb-cov: Sig-High
+Th0.15-vb-fb: NoSig
+
+
+Th0.20-Cov-random: Sig-small
+Th0.20-vb-random: High
+Th0.20-fb-random: High
+Th0.20-vb-cov: Sig-High
+Th0.20-fb-cov: Sig-High
+Th0.20-vb-fb: NoSig
+
+Th0.25-Cov-random: Sig-small
+Th0.25-vb-random: Sig-High
+Th0.25-fb-random: Sig-High
+Th0.25-vb-cov: Sig-High
+Th0.25-fb-cov: Sig-High
+Th0.25-vb-fb: NoSig
+
+————————————————————————
+q=5:
+
+Oracle-Cov-random: Sig-Low
+Oracle-vb-random: Sig-High
+Oracle-fb-random: Sig-High
+Oracle-vb-cov: Sig-High
+Oracle-fb-cov: Sig-High
+Oracle-vb-fb: Sig-low
+
+Th0.15-Cov-random: Sig-low
+Th0.15-vb-random: Sig-High
+Th0.15-fb-random: Sig-High
+Th0.15-vb-cov: Sig-Medium
+Th0.15-fb-cov: Sig-High
+Th0.15-vb-fb: NoSig
+
+
+Th0.20-Cov-random: Sig-low
+Th0.20-vb-random: Sig-High
+Th0.20-fb-random: Sig-High
+Th0.20-vb-cov: Sig-Meidum
+Th0.20-fb-cov: Sig-High
+Th0.20-vb-fb: NoSig
+
+Th0.25-Cov-random: Sig-low
+Th0.25-vb-random: Sig-High
+Th0.25-fb-random: Sig-High
+Th0.25-vb-cov: Sig-Meidum
+Th0.25-fb-cov: Sig-High
+Th0.25-vb-fb: NoSig
+
+
+————————————————————————
+q=10:
+
+Oracle-Cov-random: Sig-low
+Oracle-vb-random: Sig-High
+Oracle-fb-random: Sig-High
+Oracle-vb-cov: Sig-High
+Oracle-fb-cov: Sig-High
+Oracle-vb-fb: Sig-low
+
+Th0.15-Cov-random: Sig-Low
+Th0.15-vb-random: Sig-High
+Th0.15-fb-random: Sig-High
+Th0.15-vb-cov: Sig-Medium
+Th0.15-fb-cov: Sig-High
+Th0.15-vb-fb: NoSig
+
+Th0.20-Cov-random: Sig-Low
+Th0.20-vb-random: Sig-High
+Th0.20-fb-random: Sig-High
+Th0.20-vb-cov: Sig-Medium
+Th0.20-fb-cov: Sig-High
+Th0.20-vb-fb: NoSig
+
+Th0.25-Cov-random: Sig-Low
+Th0.25-vb-random: Sig-High
+Th0.25-fb-random: Sig-High
+Th0.25-vb-cov: Sig-Medium
+Th0.25-fb-cov: Sig-High
+Th0.25-vb-fb: NoSig
+————————————————————————

@@ -1,0 +1,28 @@
+function [CalNamesVar,CalTypesVar,CalMinVar,CalMaxVar]=Fn_ReadCalibNames(filesdirectory)
+   %read calibration variables singals names  (from workspace)
+  
+  %read calibration names
+  fcalibnames=fopen(sprintf('%s\\%s',filesdirectory,'calibnames.txt'),'rt');
+  cnt=1;
+  nextline=fgetl(fcalibnames);
+  while(ischar(nextline))
+    nextline=textscan(nextline,'%s');  
+    CalibrationVariablesNamesVar{cnt}=nextline{1}{1};
+    CalibrationVariablesTypeVar{cnt}=nextline{1}{2};
+    if(strcmp(CalibrationVariablesTypeVar{cnt},'f'))
+      CalibrationVariablesMinVar{cnt}=str2num(nextline{1}{3});
+      CalibrationVariablesMaxVar{cnt}=str2num(nextline{1}{4});
+    elseif(strcmp(CalibrationVariablesTypeVar{cnt},'e'))
+      CalibrationVariablesMinVar{cnt}=str2num(nextline{1}{3})-0.499;
+      CalibrationVariablesMaxVar{cnt}=str2num(nextline{1}{4})+0.499;
+    elseif(strcmp(CalibrationVariablesTypeVar{cnt},'TbBOOLEAN'))
+      CalibrationVariablesMinVar{cnt}=0;
+      CalibrationVariablesMaxVar{cnt}=1;
+    end    
+    nextline=fgetl(fcalibnames);
+    cnt=cnt+1;
+  end
+  fclose(fcalibnames);
+
+ 
+end

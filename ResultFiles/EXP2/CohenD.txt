@@ -1,0 +1,93 @@
+SBPD
+————————————————————————
+q=3:
+
+0.15-Prio-random: Sig-High
+0.15-Prio-Tot: Sig-High
+0.15-Prio-ADD: Sig-High
+
+0.20-Prio-random: Sig-High
+0.20-Prio-Tot: Sig-High
+0.20-Prio-ADD: Sig-High
+
+0.25-Prio-random: Sig-High
+0.25-Prio-Tot: Sig-High
+0.25-Prio-ADD: Sig-High
+————————————————————————
+q=5:
+
+0.15-Prio-random: Sig-High
+0.15-Prio-Tot: Sig-High
+0.15-Prio-ADD: Sig-High
+
+0.20-Prio-random: Sig-High
+0.20-Prio-Tot: Sig-High
+0.20-Prio-ADD: Sig-High
+
+0.25-Prio-random: Sig-High
+0.25-Prio-Tot: Sig-High
+0.25-Prio-ADD: Sig-High
+
+
+————————————————————————
+q=10:
+
+0.15-Prio-random: Sig-High
+0.15-Prio-Tot: Sig-High
+0.15-Prio-ADD: Sig-High
+
+0.20-Prio-random: Sig-High
+0.20-Prio-Tot: Sig-High
+0.20-Prio-ADD: Sig-High
+
+0.25-Prio-random: Sig-High
+0.25-Prio-Tot: Sig-High
+0.25-Prio-ADD: Sig-High
+
+
+
+SCPC
+————————————————————————
+q=3:
+
+0.15-Prio-random: Sig-High
+0.15-Prio-Tot: Sig-High
+0.15-Prio-ADD: Sig-Medium
+
+0.20-Prio-random: Sig-High
+0.20-Prio-Tot: Sig-High
+0.20-Prio-ADD: Sig-Medium
+
+0.25-Prio-random: Sig-High
+0.25-Prio-Tot: Sig-High
+0.25-Prio-ADD: Sig-Medium
+————————————————————————
+q=5:
+
+0.15-Prio-random: Sig-High
+0.15-Prio-Tot: Sig-High
+0.15-Prio-ADD: Sig-High
+
+0.20-Prio-random: Sig-High
+0.20-Prio-Tot: Sig-High
+0.20-Prio-ADD: Sig-High
+
+0.25-Prio-random: Sig-High
+0.25-Prio-Tot: Sig-High
+0.25-Prio-ADD: Sig-High
+
+
+————————————————————————
+q=10:
+
+0.15-Prio-random: Sig-High
+0.15-Prio-Tot:Sig-High
+0.15-Prio-ADD: Sig-High
+
+0.20-Prio-random: Sig-High
+0.20-Prio-Tot: Sig-High
+0.20-Prio-ADD: Sig-High
+
+0.25-Prio-random: Sig-High
+0.25-Prio-Tot: Sig-High
+0.25-Prio-ADD: Sig-High

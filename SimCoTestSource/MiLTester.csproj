@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B7F47F7-7093-4740-AC72-407937C12F1A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MiLTester</RootNamespace>
+    <AssemblyName>CoCoTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/MiLTester/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Industry-Automotive-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MiLTesterProgram.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SourceCode\Bussiness\Output\HeatMap\GUI\IHeatMapTestCaseRunListener.cs" />
+    <Compile Include="SourceCode\Bussiness\Output\HeatMap\HeatMapPoint.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabAsyncProgram.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\CloseOpenWindowsRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\ExtractInfoRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\HighlightBlcokRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\Listeners\ISingleStateSearchRunProgressListener.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\Listeners\ISingleTestRunProgressListener.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\Listeners\IRandomExplorationProgressListener.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\Listeners\ISLTestGenerationProgressListener.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\MatlabCommands\MatlabCommand.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\MatlabCommands\CompositeMatlabCommand.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabCommandBuilder.cs" />
+    <Compile Include="SourceCode\Bussiness\Output\HeatMap\GUI\HeatMapLayoutRegionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Bussiness\Output\HeatMap\HeatMap.cs" />
+    <Compile Include="SourceCode\Bussiness\Output\HeatMap\HeatMapLayout.cs" />
+    <Compile Include="SourceCode\Bussiness\Output\HeatMap\GUI\HeatMapPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Bussiness\Output\HeatMap\HeatMapRegion.cs" />
+    <Compile Include="SourceCode\Bussiness\Output\HeatMap\GUI\HeatMapRegionPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\MatlabRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\RunOutput\SingleStateSearchRunOutput.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\SingleStateSearchRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\SingleTestCaseRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\SingleTestRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\RandomExplorationRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\RunOutput\MatlabRunOutput.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\RunOutput\SingleTestRunOutput.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\RunOutput\RandomExplorationRunOutput.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\SLTestGenerationRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\StaticChecksRun.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabSyncProgram.cs" />
+    <Compile Include="SourceCode\Bussiness\Settings\AdvancedCCSettings.cs" />
+    <Compile Include="SourceCode\Bussiness\RunEngine\MatlabRuns\MatlabCommands\SingleMatlabCommand.cs" />
+    <Compile Include="SourceCode\Bussiness\Settings\AdvanceSBSettings.cs" />
+    <Compile Include="SourceCode\Bussiness\Settings\ProgramSettings.cs" />
+    <Compile Include="SourceCode\Bussiness\Settings\SBSetting.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\CCTestWorkspace.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\IOTestWorkspace.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\ITestWorkspaceAddRemoveListener.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\Parameters\BlockInfo.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\Parameters\ParameterDataType.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\Parameters\StaticCheckBlock.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\Parameters\TestParameter.cs" />
+    <Compile Include="SourceCode\Bussiness\Settings\CCSettings.cs" />
+    <Compile Include="SourceCode\Bussiness\Settings\ModelSettings.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\SLTestWorkspace.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\TestCases\CCTestCase.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\TestCases\SLSignal.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\TestCases\SLTestCase.cs" />
+    <Compile Include="SourceCode\Bussiness\Workspace\TestWorkspace.cs" />
+    <Compile Include="SourceCode\Common\ErrorResult.cs" />
+    <Compile Include="SourceCode\Data\TestWorkspaceDataProvider.cs" />
+    <Compile Include="SourceCode\Presentation\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Components\RotatbleLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ExtractInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ExtractInfoForm.Designer.cs">
+      <DependentUpon>ExtractInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\SLTestProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\SLTestProgressForm.Designer.cs">
+      <DependentUpon>SLTestProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\StaticChecksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\StaticChecksForm.Designer.cs">
+      <DependentUpon>StaticChecksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestAdvancedCCSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestAdvancedCCSettingsForm.Designer.cs">
+      <DependentUpon>ModelUnderTestAdvancedCCSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestSLSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestSLSettings.Designer.cs">
+      <DependentUpon>ModelUnderTestSLSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\SimulinkTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\SimulinkTestForm.Designer.cs">
+      <DependentUpon>SimulinkTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\TestRunProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\TestRunProgressForm.Designer.cs">
+      <DependentUpon>TestRunProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Results\CCTestWorkspaceResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Results\CCTestWorkspaceResultsForm.Designer.cs">
+      <DependentUpon>CCTestWorkspaceResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Components\ColorSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Components\ColorSlider.designer.cs">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Components\CustomizedSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Components\UsefulValueChangeArgs.cs" />
+    <Compile Include="SourceCode\Presentation\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\TestProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\TestProgressForm.Designer.cs">
+      <DependentUpon>TestProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Results\CheckResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Results\CheckResultsForm.Designer.cs">
+      <DependentUpon>CheckResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Results\SLTestWorkspaceResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\Results\SLTestWorkspaceResultsForm.Designer.cs">
+      <DependentUpon>SLTestWorkspaceResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\AdvanceCCSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\AdvanceCCSettingsForm.Designer.cs">
+      <DependentUpon>AdvanceCCSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\AdvancedSBSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\AdvancedSBSettingsForm.Designer.cs">
+      <DependentUpon>AdvancedSBSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\CCSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\CCSettingsForm.Designer.cs">
+      <DependentUpon>CCSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\ParentSLSettingsForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\ParentAdvancedSBSettingsForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\ISBSettingsChangeListener.cs" />
+    <Compile Include="SourceCode\Presentation\SettingsForms\ICCSettingsChangeListener.cs" />
+    <Compile Include="SourceCode\Presentation\SettingsForms\ParentAdvancedCCSettingsForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\ParentCCSettingsForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\ParentModelSettingsForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\ModelSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\ModelSettingsForm.Designer.cs">
+      <DependentUpon>ModelSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\SLSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SettingsForms\SLSettingsForm.Designer.cs">
+      <DependentUpon>SLSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SoftwareModeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\SoftwareModeForm.Designer.cs">
+      <DependentUpon>SoftwareModeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ContinuousControllerTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ContinuousControllerTestForm.Designer.cs">
+      <DependentUpon>ContinuousControllerTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\FunctionTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\FunctionTypeForm.Designer.cs">
+      <DependentUpon>FunctionTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestModelSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestModelSettings.Designer.cs">
+      <DependentUpon>ModelUnderTestModelSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestCCSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestCCSettings.Designer.cs">
+      <DependentUpon>ModelUnderTestCCSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\WizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\TestWorkspaceRenameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SourceCode\Presentation\TestWorkspaceRenameForm.Designer.cs">
+      <DependentUpon>TestWorkspaceRenameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SourceCode\Service\SettingFilesManager.cs" />
+    <Compile Include="SourceCode\Service\UtilityClass.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SourceCode\Presentation\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ExtractInfoForm.resx">
+      <DependentUpon>ExtractInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\SLTestProgressForm.resx">
+      <DependentUpon>SLTestProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\StaticChecksForm.resx">
+      <DependentUpon>StaticChecksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestAdvancedCCSettingsForm.resx">
+      <DependentUpon>ModelUnderTestAdvancedCCSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestSLSettings.resx">
+      <DependentUpon>ModelUnderTestSLSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\SimulinkTestForm.resx">
+      <DependentUpon>SimulinkTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\TestRunProgressForm.resx">
+      <DependentUpon>TestRunProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\WizardForm.resx">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\Results\CCTestWorkspaceResultsForm.resx">
+      <DependentUpon>CCTestWorkspaceResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\Components\ColorSlider.resx">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\TestProgressForm.resx">
+      <DependentUpon>TestProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\Results\CheckResultsForm.resx">
+      <DependentUpon>CheckResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\Results\SLTestWorkspaceResultsForm.resx">
+      <DependentUpon>SLTestWorkspaceResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\AdvanceCCSettingsForm.resx">
+      <DependentUpon>AdvanceCCSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\AdvancedSBSettingsForm.resx">
+      <DependentUpon>AdvancedSBSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\CCSettingsForm.resx">
+      <DependentUpon>CCSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\ParentSLSettingsForm.resx">
+      <DependentUpon>ParentSLSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\ParentAdvancedSBSettingsForm.resx">
+      <DependentUpon>ParentAdvancedSBSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\ParentAdvancedCCSettingsForm.resx">
+      <DependentUpon>ParentAdvancedCCSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\ParentCCSettingsForm.resx">
+      <DependentUpon>ParentCCSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\ParentModelSettingsForm.resx">
+      <DependentUpon>ParentModelSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\ModelSettingsForm.resx">
+      <DependentUpon>ModelSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SettingsForms\SLSettingsForm.resx">
+      <DependentUpon>SLSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\SoftwareModeForm.resx">
+      <DependentUpon>SoftwareModeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ContinuousControllerTestForm.resx">
+      <DependentUpon>ContinuousControllerTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\FunctionTypeForm.resx">
+      <DependentUpon>FunctionTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestModelSettings.resx">
+      <DependentUpon>ModelUnderTestModelSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\NewTestWorkSpaceWizardForms\ModelUnderTestCCSettings.resx">
+      <DependentUpon>ModelUnderTestCCSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceCode\Presentation\TestWorkspaceRenameForm.resx">
+      <DependentUpon>TestWorkspaceRenameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Industry-Automotive-icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MLApp">
+      <Guid>{C36E46AB-6A81-457B-9F91-A7719A06287F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

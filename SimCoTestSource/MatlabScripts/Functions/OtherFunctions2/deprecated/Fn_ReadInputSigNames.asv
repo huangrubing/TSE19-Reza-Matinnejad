@@ -1,0 +1,41 @@
+function [NoInputVars,InputNamesVar,InputTypesVar,InputMinVar,InputMaxVar,InputMaxSteps]=Fn_ReadInputSigNames(filesdirectory)
+   %read input singals names  (from workspace)
+  
+  finputsigsnames=fopen(sprintf('%s\\%s',filesdirectory,'inputsigsnames.txt'),'rt');
+  cnt=1;
+  nextline=fgetl(finputsigsnames);
+  while(ischar(nextline))
+    nextline=textscan(nextline,'%s');
+    varcnt=1;
+    InputNamesVar{cnt}=nextline{1}{varcnt};
+    varcnt=varcnt+1;
+    InputTypesVar{cnt}=nextline{1}{varcnt};
+    varcnt=varcnt+1;
+    if(strcmp(InputTypesVar{cnt},'f'))
+      InputMinVar{cnt}=str2double(nextline{1}{varcnt});
+      varcnt=varcnt+1;
+      InputMaxVar{cnt}=str2double(nextline{1}{varcnt});
+      varcnt=varcnt+1;
+    elseif(strcmp(InputTypesVar{cnt},'e'))
+      InputMinVar{cnt}=str2double(nextline{1}{varcnt})-0.499;
+      varcnt=varcnt+1;
+      InputMaxVar{cnt}=str2num(nextline{1}{varcnt})+0.499;
+      varcnt=varcnt+1;
+    elseif(strcmp(InputTypesVar{cnt},'TbBOOLEAN'))
+      InputMinVar{cnt}=0;
+      InputMaxVar{cnt}=1;
+    end
+    if(size(nextline{1},1)>=varcnt)
+      InputMaxSteps{cnt}=str2num(nextline{1}{varcnt});
+    else
+      InputMaxSteps{cnt}=2;
+    end
+    nextline=fgetl(finputsigsnames);
+    cnt=cnt+1;
+  end
+  fclose(finputsigsnames);
+  NoInputVars=0;
+  if(exist('InputNamesVar','var'))
+    NoInputVars=length(InputNamesVar);
+  end
+end
